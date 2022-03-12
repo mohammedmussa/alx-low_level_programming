@@ -1,23 +1,19 @@
 #include <stdio.h>
-
+/**
+ * main - Entry point
+ * Return:0
+ */
 int main(void)
 {
-    char ch = 'a';
-    int i = 0;
-    
-	while (i < 16)
-	{
-		if (i < 10)
-		{
-			putchar(i + '0');
-		}
-		else
-		{
-		    putchar(ch);
-		    ch++;
-		}
-		i++;
-	}
-	putchar('\n');
-    return 0;
+    int i, y;
+    for (i = 0; i < 10; i++)
+    {
+        putchar (i + '0');
+    }
+    for (y = 'a'; y <= 'f'; y++)
+    {
+        putchar (y);
+    }
+putchar('\n');
+return (0);
 }
