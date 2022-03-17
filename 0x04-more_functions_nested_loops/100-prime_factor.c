@@ -1,37 +1,26 @@
-#include "main.h"
+#include <stdio.h>
+#include <math.h>
 /**
- * print_number - prints numbers
- * @n: number to be printed
- * Return:void
+ * main - prime numbers
+ *
+ * Return: Always 0.
  */
-
-void print_number(int n)
+int main(void)
 {
 
-	int d = 1, i = 0, ii = 0;
+unsigned int long n = 612852475143, a = (int) sqrt(n);
 
-	if (n < 0)
+while (1)
+{
+
+	if (n % a == 0)
 	{
-		_putchar('-');
-		n = -n;
+		printf("%lu \n", n / a);
+		break;
 	}
+	a--;
 
-	while (n / d != 0)
-	{
-		d *= 10;
-		i++;
-	}
-	d = d / 10;
+}
 
-	while (ii < i)
-	{
-		_putchar('0' + n / d);
-		n = n - (n / d) * d;
-		d = d / 10;
-		ii++;
-	}
-
-	if (i == 0)
-		_putchar('0' + n);
-
+return (0);
 }
