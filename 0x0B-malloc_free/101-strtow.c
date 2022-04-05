@@ -35,7 +35,6 @@ void free_everything(char **string, int i)
 		free(string[--i]);
 	free(string);
 }
-
 /**
  * strtow - function that splits string into words
  * @str: string being passed
@@ -45,7 +44,6 @@ char **strtow(char *str)
 {
 	int total_words = 0, b = 0, c = 0, length = 0;
 	char **words, *found_word;
-
 	if (str == 0 || *str == 0)
 		return (NULL);
 	total_words = number(str);
